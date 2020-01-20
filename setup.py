@@ -32,7 +32,7 @@ def get_requirements(env=None):
 
 
 install_requirements = get_requirements()
-dev_requirements = get_requirements("dev")
+test_requirements = get_requirements("test")
 
 setup(
     name="affo-email-client",
@@ -60,5 +60,5 @@ setup(
     keywords="email service client",
     packages=find_packages(),
     install_requires=install_requirements,
-    tests_require=dev_requirements,
+    tests_require=test_requirements,
 )
