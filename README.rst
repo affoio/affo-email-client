@@ -9,7 +9,7 @@ Installation
 ------------
 
 ============ =============================================
-**Version**  1.0.1.dev
+**Version**  1.0.1
 **Web**      https://affo.io/
 **Download** https://pypi.org/affoio/affo-email-client/
 **Source**   https://github.com/affoio/affo-email-client/
