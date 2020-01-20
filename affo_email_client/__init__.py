@@ -3,7 +3,7 @@ from simple_rest_client.resource import Resource
 
 __all__ = ["Client"]
 
-VERSION = "1.0.0"
+VERSION = "1.0.1.dev"
 
 
 class MessageResource(Resource):
