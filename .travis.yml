@@ -1,30 +1,23 @@
 sudo: required
 dist: xenial
-
 services:
 - docker
-
 language: python
-
 python:
 - '2.7'
 - '3.6'
 - '3.7'
-
 install:
 - pip install flake8
-
 script:
 - flake8 .
-
 before_deploy:
 - python setup.py bdist_wheel
-
 deploy:
-- provider: pypi
+  provider: pypi
   user: adalekin
   password:
-    secure: MrESXRRxQu1lYQEqip3kg0SC21xp8T7lsLQL1PoNWDHhQqHzH87HDlKzkds3l+cnRPhbt6CMEvJckZLbQVq60Js8arfswBeyRSm72D5P2PR8/DhfAaLW0CbOEc2jtaBxuUi5b3ZpMDSQi7/nZEG4kXoxiv2fznYLqppb118B6/sD9+NHphYIxQYG/G9YW2eVpZmXEl33Ed+GUIuQTsQ6Frij0U7PlsC7Og/0sZd6pzEGFaCqA//EhlDw7V2BU6PqhzXHO9tiL0G9N51iAMlFuc4Vspnsfs92DGqvHYhbLN9QrhX0Fp+1lcxXYyOQJRnyBCXABIK2nzUeXJqONx8aVhNlkBu9eybMagQYhfdHdOWSjGAWgos1vBtR53ft7XN6bF7kZ4IpKmPJ6pWsQ9oOC/oP5TQbERK5UHV2aLYLY/Dl/LmyZl2j6FZUjuF4PJ3q03QJ05SpWHw0MDT9RhfsP7Tuo4FJ0J71u39IYBMOLj1leF8A82/FeaZjBqfvil86OSv1zO/cME8oH+pSXg4sHmUAan6QsvOfqEmd5jzpU3QAadQxdMfdLqIFc8j404swn0cdH7ydEM5dtKpPkkKEw1GBkyxR6HyQF8SF/dJHO9l8nrVT6mikn1ejW9ffZBBuIG3b2lLB1scLVcCr+lktP9TbJ/B4msuwikSW4K7Ji5Y=
+    secure: Ae1yNgwnKtSO7d0EfNDT8vzmpFDVSfNcCuQ+6gC1F/IJcQuxl1WnXmFW58BNUFJiypCdU9/0nGK1z8VLyyANbP57XQDxC/lLrO4XgX5onC4tZptVFX3e4xsPKYuhdoIZZkWmHDhxt7adNpyexguig5sXUGY4IRtFrC1K6+dJR0edAyFGGS64EzISr2wj1W6gvQ8tT7AlcnISHr1eH+HARLiIPebDCTQz/su8N4ofAAgCU20RPN/XArcJa4ObuYNAo8n2Yb2nlgpog4ZqfIiYJsP3shVF9ubNSDUdw+XcccLysYhzM+0Xq1192Dr3cDdjopAtUxl8E2bk1rWtG/CrVeWeF4KT9R1zufDRdPNGLcB94suC2uHVLlTBa/2Oz2R72A7pQnQ9DDsRcEsZ7SDifzv+1sTEVb4EsCVJIWtcvDMN4ABd89Ro+TxAgrh2kadBiiE7ZVZZCAtTy8ATVMkDnB37KsWEXhB1Rlkz5WG5H8Q11DjiQAHn4lXMJRpbyBSP54q8bWospGvwK6BceFx3+0WQfAXn4uoZ9cXSNzwGEZ0fzH/AQLfsqvgNvS8Cse13YG8imnbiw4TCMgriIHi5SzOjNNRWMaLcFE1XkDRw9r11eq4Jh4KcX5SnNw7e9hpJuZ1jxG4g31/pG+90POh2lJYzw3ogAUN7n0UhH763EOk=
   distributions: sdist bdist_wheel
   on:
     tags: true
